@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+*{
+  /* background: black; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+}
+.bg-primary{
+background: #0f0c29;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.sub-title{
+  font-size: 9px;
+  font-weight: 700;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.nav-item .nav-link{
+  color: white;
+  /* font-family: 'Nunito', sans-serif; */
+  font-weight: 800;
+}
+
+.navbar-brand{
+  color: white;
+  font-weight: 900;
+  font-size: 1.4rem;
+}
+/* //Hanif Ganteng */
+
+.hero{
+  color: white;
+  font-size: 5rem;
+  font-weight: 900;
+  margin-top: 0.2rem;
+  /* position: absolute; */
+}
+
+.img-hero{
+  width: 20rem;
+  margin: 0 auto;
+  display: block;
+}
+.banner-bg{
+ background: #2b2853;
+}
+.banner-wight{
+  font-weight: 700;
+}
+.genrate{
+  border-bottom-left-radius: 0px;
+  border-top-left-radius: 0px;
+  cursor: pointer;
+}
