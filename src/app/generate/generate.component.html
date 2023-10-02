@@ -18,6 +18,15 @@
         </div>
       </div>
     </div>
+    <div class="container text-center">
+      <!-- <ng-container *ngIf="loading$ | async">
+        <div class="overlay"></div>
+        <mat-progress-spinner [mode]="'indeterminate'"></mat-progress-spinner>
+      </ng-container> -->
+      <div class="spinner-border text-warning mb-5" role="status" *ngIf="loading$ |async">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
   </section>
   <section class="container-fluid banner-bg">
     <div class="row">

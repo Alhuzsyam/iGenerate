@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ElementRef, ViewChild } from '@angular/core';
 import { Promt } from '../models/promt';
 import { GenerateserviceService } from '../service/generateservice.service';
+import { LoadingService } from '../service/loading.service';
 
 @Component({
   selector: 'app-generate',
@@ -10,13 +11,14 @@ import { GenerateserviceService } from '../service/generateservice.service';
 })
 
 export class GenerateComponent implements OnInit {
+  loading$ = this.loader.loading$;
   command = new Promt;
   imageUrl: any | null = null;
   @ViewChild('myInput') myInput!: ElementRef<HTMLInputElement> | null;
   items = ['Realistic painting of a dystopian industrial city with towering factories, pollution-filled air, and a gloomy sky.', 'Victorian-era painting of a masquerade ball with elaborate costumes, contrasting colors, and soft lighting.', 'Whimsical painting of an enchanted forest with mythical creatures, vibrant colors, and intricate details.', 'Cityscape painting during a rainy day, focusing on reflections in puddles with a mix of soft and harsh brush strokes.', 'Surreal painting of a child dreaming about floating among stars, using soft, dreamy colors and elements of fantasy.','Arctic landscape painting with glaciers, polar bears, and the Northern Lights, using different shades of blue and green.','Steampunk-inspired painting representing the human mind as a complex mechanism, with intricate details and metallic colors.'];
   ngOnInit(): void {
   }
-  constructor(private generateService:GenerateserviceService){
+  constructor(private generateService:GenerateserviceService,public loader:LoadingService){
     this.myInput = null;
   }
   supriseMe():any{
